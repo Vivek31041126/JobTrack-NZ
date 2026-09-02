@@ -8,6 +8,25 @@ JobTrack NZ solves a real problem for job seekers: keeping track of applications
 
 It demonstrates practical software-engineering skills beyond academic coursework.
 
+## Application Preview
+
+![JobTrack NZ Dashboard](docs/screenshots/jobtrack-dashboard.png)
+
+JobTrack NZ provides a responsive dashboard for managing job applications, tracking progress through recruitment stages, and monitoring application outcomes.
+
+## Key Features
+
+- Create, view, update and delete job applications
+- Track application status from Applied through Offer or Rejected
+- Search applications by company or role
+- Filter applications by recruitment stage
+- Store job URLs, source, location and notes
+- View real-time application statistics
+- REST API built using FastAPI
+- PostgreSQL relational database
+- Responsive React frontend
+- Docker-based development environment
+
 ## Tech Stack
 
 ### Frontend
@@ -55,17 +74,32 @@ Applied → Screening → Interview → Offer
 
 ## Architecture
 
+## System Architecture
+
 ```text
-React Frontend
-      ↓
-REST API / JSON
-      ↓
-FastAPI Backend
-      ↓
-SQLAlchemy ORM
-      ↓
-PostgreSQL
-```
+┌─────────────────────────────┐
+│        React Frontend       │
+│        Port 5173            │
+└──────────────┬──────────────┘
+               │
+               │ HTTP / JSON
+               │ REST API
+               ▼
+┌─────────────────────────────┐
+│       FastAPI Backend       │
+│         Port 8000           │
+│                             │
+│ CRUD • Validation • API     │
+└──────────────┬──────────────┘
+               │
+               │ SQLAlchemy ORM
+               ▼
+┌─────────────────────────────┐
+│         PostgreSQL          │
+│         Port 5432           │
+│                             │
+│ Job Application Records     │
+└─────────────────────────────┘
 
 ## Run with Docker
 
