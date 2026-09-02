@@ -2,25 +2,6 @@
 
 A full-stack job application management platform built as a portfolio project using **React, FastAPI, PostgreSQL and REST APIs**.
 
-## Application Preview
-
-![JobTrack NZ Dashboard](docs/screenshots/jobtrack-dashboard.png)
-
-JobTrack NZ provides a responsive dashboard for managing job applications, tracking progress through recruitment stages, and monitoring application outcomes.
-
-## Key Features
-
-- Create, view, update and delete job applications
-- Track application status from Applied through Offer or Rejected
-- Search applications by company or role
-- Filter applications by recruitment stage
-- Store job URLs, source, location and notes
-- View real-time application statistics
-- REST API built using FastAPI
-- PostgreSQL relational database
-- Responsive React frontend
-- Docker-based development environment
-
 ## Why this project
 
 JobTrack NZ solves a real problem for job seekers: keeping track of applications, interview stages, recruiter contacts, job links and outcomes across multiple platforms.
@@ -29,7 +10,7 @@ It demonstrates practical software-engineering skills beyond academic coursework
 
 ## Application Preview
 
-![JobTrack NZ Dashboard](docs/screenshots/jobtrack-dashboard.png)
+![JobTrack NZ Dashboard](./docs/screenshots/jobtrack-dashboard.png)
 
 JobTrack NZ provides a responsive dashboard for managing job applications, tracking progress through recruitment stages, and monitoring application outcomes.
 
