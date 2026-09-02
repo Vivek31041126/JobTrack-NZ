@@ -120,6 +120,7 @@ Applied → Screening → Interview → Offer
 │ Job Application Records     │
 └─────────────────────────────┘
 
+
 ## Run with Docker
 
 ### Requirements
