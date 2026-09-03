@@ -18,16 +18,24 @@ JobTrack NZ provides a responsive dashboard for managing job applications, track
 
 ## Key Features
 
-- Create, view, update and delete job applications
-- Track application status from Applied through Offer or Rejected
+- Secure user registration and login
+- Password hashing and JWT authentication
+- Protected REST API endpoints
+- User-specific application data
+- Create, update and delete job applications
 - Search applications by company or role
 - Filter applications by recruitment stage
-- Store job URLs, source, location and notes
-- View real-time application statistics
-- REST API built using FastAPI
+- Application pipeline analytics
+- Interview and offer-rate tracking
+- Recruiter and professional contact management
+- Follow-up date tracking
+- LinkedIn and contact information management
 - PostgreSQL relational database
 - Responsive React frontend
-- Docker-based development environment
+- FastAPI backend
+- Docker Compose development environment
+- Automated Pytest test suite
+- GitHub Actions continuous integration
 
 ## Tech Stack
 
