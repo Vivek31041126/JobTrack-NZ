@@ -1,10 +1,19 @@
-from sqlalchemy import Column, Integer, String, Date, Text, DateTime
+from sqlalchemy import Column, Integer, String, Date, Text, DateTime, ForeignKey
+from sqlalchemy.orm import relationship
 from sqlalchemy.sql import func
 from .database import Base
 
+class User(Base):
+    __tablename__ = "users"
+    id = Column(Integer, primary_key=True, index=True)
+    email = Column(String(200), unique=True, nullable=False, index=True)
+    full_name = Column(String(150), nullable=False)
+    hashed_password = Column(String(255), nullable=False)
+    created_at = Column(DateTime(timezone=True), server_default=func.now())
+    applications = relationship("JobApplication", back_populates="owner", cascade="all, delete-orphan")
+
 class JobApplication(Base):
     __tablename__ = "job_applications"
-
     id = Column(Integer, primary_key=True, index=True)
     company = Column(String(150), nullable=False, index=True)
     role = Column(String(150), nullable=False, index=True)
@@ -17,3 +26,5 @@ class JobApplication(Base):
     job_url = Column(String(500), nullable=True)
     notes = Column(Text, nullable=True)
     created_at = Column(DateTime(timezone=True), server_default=func.now())
+    user_id = Column(Integer, ForeignKey("users.id", ondelete="CASCADE"), nullable=False, index=True)
+    owner = relationship("User", back_populates="applications")
