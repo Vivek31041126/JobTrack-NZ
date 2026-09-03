@@ -1,6 +1,8 @@
 # JobTrack NZ
 
-A full-stack job application management platform built as a portfolio project using **React, FastAPI, PostgreSQL and REST APIs**.
+[![JobTrack NZ CI](https://github.com/Vivek31041126/JobTrack-NZ/actions/workflows/ci.yml/badge.svg)](https://github.com/Vivek31041126/JobTrack-NZ/actions/workflows/ci.yml)
+
+A secure full-stack job application management platform built with React, FastAPI, PostgreSQL, JWT authentication and Docker.
 
 ## Why this project
 
@@ -215,6 +217,28 @@ The current version is an MVP. Recommended next additions:
 - Backend validation
 - Docker-based development
 - Git/GitHub workflow
+
+## 🧪 Automated Testing & Continuous Integration
+
+JobTrack NZ includes automated backend tests and a GitHub Actions continuous integration workflow.
+
+### Backend Test Coverage
+
+The automated test suite validates:
+
+- API health checks
+- User registration and login
+- JWT-protected REST API endpoints
+- Duplicate-account protection
+- Job application CRUD operations
+- Application analytics
+- Multi-user data isolation
+- Recruiter/contact CRUD operations
+
+Run the tests locally:
+
+```bash
+docker compose exec backend pytest tests -q
 
 ## Author
 
