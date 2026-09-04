@@ -82,6 +82,16 @@ Applied → Screening → Interview → Offer
                      Rejected
 ```
 
+### CI/CD Workflow
+git push
+   ↓
+GitHub Actions
+   ├── FastAPI tests ✅
+   └── React build ✅
+   ↓
+Deployment
+
+
 ## Architecture
 
 ## System Architecture
