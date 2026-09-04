@@ -5,7 +5,7 @@
 A secure full-stack job application management platform built with React, FastAPI, PostgreSQL, JWT authentication and Docker.
 
 ## 🌐 Live Application
-}
+
 🚀 **Live Demo:** [Open JobTrack NZ](https://vercel.com/data-366c/job-track-nz/settings/domains)
 
 📚 **API Documentation:** [FastAPI Swagger](https://jobtrack-nz-api.onrender.com)
