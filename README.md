@@ -90,14 +90,27 @@ Applied → Screening → Interview → Offer
                      Rejected
 ```
 
-### CI/CD Workflow
+## 🔄 CI/CD & Deployment
+
+```text
+Developer
+   │
+   ▼
 git push
-   ↓
+   │
+   ▼
+GitHub
+   │
+   ▼
 GitHub Actions
-   ├── FastAPI tests ✅
-   └── React build ✅
-   ↓
-Deployment
+   ├── FastAPI Automated Tests ✅
+   └── React Production Build ✅
+   │
+   ▼
+Production
+   ├── React → Vercel
+   ├── FastAPI → Render
+   └── PostgreSQL → Render
 
 
 ## Architecture
@@ -153,6 +166,26 @@ Open FastAPI documentation:
 ```text
 http://localhost:8000/docs
 ```
+
+## 🏗️ System Architecture
+
+```text
+                    JobTrack NZ
+                         │
+                         ▼
+                React + Vite Frontend
+                     Vercel
+                         │
+                         │ HTTPS / REST API
+                         ▼
+                 FastAPI Backend
+                      Render
+                         │
+                  SQLAlchemy ORM
+                         │
+                         ▼
+                   PostgreSQL
+                      Render
 
 ## Run without Docker
 
